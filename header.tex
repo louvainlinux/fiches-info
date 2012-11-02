@@ -1,0 +1,104 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Header pour fiche info du LLNux %
+%     Version 1.0 (01/11/2012)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}           % UTF-8
+\usepackage[a4paper, dvips]{geometry} % mise en page générale
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}              % polices
+\usepackage{multicol}                 % multi-colonnes avancé
+\usepackage{xspace}                   % espaces conditionnels
+\usepackage{graphicx}                 % images
+\usepackage[francais]{babel}          % français
+
+\usepackage{amsmath}                  % math
+\usepackage{amssymb}                  % math
+\usepackage{gensymb}                  % math
+
+\usepackage{url}
+	\urlstyle{sf}
+\usepackage[usenames]{color}
+\usepackage{varioref}                 % \vpageref
+
+\usepackage{fancyhdr}                 % cfoot
+\pagestyle{fancy}                     % we need info at the bottom but not a footnote
+\renewcommand{\headrulewidth}{0pt}    % ça crée une ligne au-dessus... on l'enlève
+% \thispagestyle{empty}               % we need only one page
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{codeBlue}{rgb}{0,0,1}
+\definecolor{webred}{rgb}{0.5,0,0}
+\definecolor{codeGreen}{rgb}{0,0.5,0}
+\definecolor{codeGrey}{rgb}{0.6,0.6,0.6}
+\definecolor{webdarkblue}{rgb}{0,0,0.4}
+\definecolor{webgreen}{rgb}{0,0.3,0}
+\definecolor{webblue}{rgb}{0,0,0.8}
+\definecolor{orange}{rgb}{0.7,0.1,0.1}
+
+% Configuration de babel
+\NoAutoSpaceBeforeFDP
+
+% Configuration de graphicx
+\graphicspath{{images/}}
+
+% Titre, auteur et date
+\title{Informations sur les logiciels libres}
+\author{Kot-à-projet Louvain-Li-Nux}
+\date{\today}
+
+% Commandes personnalisées
+\newcommand{\upcirc}{$^{\circ}$\xspace}
+\newcommand{\super}[1]{$^{\mbox{\scriptsize #1}}$\xspace}
+
+% Réduction des marges
+% Dimensions de la page :       	
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  0
+  %   |                                  %
+  %---+----------------------------------%  1
+  %   | +----------------------------+   %  2
+  %   | |          en-tête           |   %
+  %   | +----------------------------+   %  3
+  %   | +----------------------------+   %  4
+  %   | |                            |   %       Remarques : 
+  %   | |                            |   %        . distance de '0' à '1' : un pouce + \voffset
+  %   | |                            |   %        . distance de 'a' à 'b' : un pouce + \hoffset
+  %   | |           texte            |   %
+  %   | |                            |   %
+  %   | |                            |   %
+  %   | |                            |   %
+  %   | +----------------------------+   %  5
+  %   | +----------------------------+   %
+  %   | |         bas de page        |   %
+  %   | +----------------------------+   %  6
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %a  b c                            d
+
+   % général
+     \voffset       -25mm    % pour descendre (si positif) ou remonter (si négatif) le tout
+     \hoffset       -10mm    % pour agrandir (si positif) ou diminuer (si négatif) la marge gauche
+     \oddsidemargin 10pt   % distance de 'b' à 'c'
+   % texte
+     \headsep       42pt   % distance de '3' à '4', la distance entre l'en-tête et le texte
+     \textheight    700pt  % distance de '4' à '5', pour déterminer la hauteur du texte
+     \textwidth     170mm  % distance de 'c' à 'd' 
+   % en-tête
+     \topmargin     0pt    % distance de '1' à '2', pour descendre (si positif) ou remonter (si négatif) le tout
+     \headheight    14pt   % distance de '2' à '3', doit être > 13.59999
+   % bas de page
+     \footskip      42pt   % distance de '5' à '6', la distance entre le texte et le bas de page
+%\addtolength{\hoffset}{-1cm}
+%\addtolength{\textwidth}{2.5cm}
+%\addtolength{\voffset}{-2cm}
+%\addtolength{\textheight}{4.9cm}
+
+% Logo du Louvain-Li-Nux
+\newsavebox{\logollnux}
+\sbox{\logollnux}{\raisebox{-2.5cm}{\includegraphics[height=2.5cm]{logo.png}}}
+
+% pied de page
+\cfoot{\url{www.louvainlinux.be} \hspace{0.5cm}Rue Constantin Meunier 12 (Bruyères)}
