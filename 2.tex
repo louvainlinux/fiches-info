@@ -1,51 +1,13 @@
-\documentclass[12pt,a4paper]{article}
-
-\usepackage[utf8x]{inputenc}          % UTF-8
-\usepackage[a4paper, dvips]{geometry} % mise en page générale
-\usepackage[T1]{fontenc}              % polices
-\usepackage{multicol}                 % multi-colonnes avancé
-\usepackage{xspace}                   % espaces conditionnels
-\usepackage{graphicx}                 % images
-\usepackage[francais]{babel}          % français
-
-\thispagestyle{empty}
-
-% Configuration de babel
-\NoAutoSpaceBeforeFDP
-
-% Configuration de graphicx
-\graphicspath{{images/}}
-
-% Titre, auteur et date
-\title{Informations sur les logiciels libres}
-\author{Kot-à-projet Louvain-Li-Nux}
-\date{Septembre 2012}
-
-% Commandes personnalisées
-\newcommand{\upcirc}{$^{\circ}$\xspace}
-\newcommand{\super}[1]{$^{\mbox{\scriptsize #1}}$\xspace}
-
-% Réduction des marges
-\addtolength{\hoffset}{-1cm}
-\addtolength{\textwidth}{2.5cm}
-\addtolength{\voffset}{-2cm}
-\addtolength{\textheight}{4.9cm}
-
-% Logo du Louvain-Li-Nux
-\newsavebox{\logollnux}
-\sbox{\logollnux}{\raisebox{-2.5cm}{\includegraphics[height=2.5cm]{logo.png}}}
+\input{header.tex}
 
 \begin{document}
 
 % Titre
-
-\begin{tabular}{p{12cm}r}
-
-\begin{center}{\Large Les fiches du Louvain-li-Nux\linebreak \linebreak
-\LARGE Episode 2: Ubuntu}\end{center}
-&
-\usebox{\logollnux}
-
+\begin{tabular}{p{13cm}r}
+    \begin{center}{\Large Les fiches du Louvain-li-Nux\linebreak \linebreak
+	\LARGE Episode 2: Ubuntu}\end{center}
+		&
+	\usebox{\logollnux}
 \end{tabular}
 
 % Contenu
@@ -66,4 +28,4 @@ Pour plus d'informations:
 
 \begin{center}\texttt{www.louvainlinux.be} \hspace{0.5cm}Rue Constantin Meunier 12 (Bruyères)\end{center}
                                                                                                                        
-\end{document}	
+\end{document}		
