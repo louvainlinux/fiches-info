@@ -1,9 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Header pour fiche info du LLNux %
-%     Version 1.0 (01/11/2012)    %
+%     Version 1.1 (03/11/2012)    %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper,10pt]{article}
 
 \usepackage[utf8]{inputenc}           % UTF-8
 \usepackage[a4paper, dvips]{geometry} % mise en page générale
@@ -79,18 +79,18 @@
   %a  b c                            d
 
    % général
-     \voffset       -25mm    % pour descendre (si positif) ou remonter (si négatif) le tout
-     \hoffset       -10mm    % pour agrandir (si positif) ou diminuer (si négatif) la marge gauche
+     \voffset       -40mm    % pour descendre (si positif) ou remonter (si négatif) le tout
+     \hoffset       -12.5mm    % pour agrandir (si positif) ou diminuer (si négatif) la marge gauche
      \oddsidemargin 10pt   % distance de 'b' à 'c'
    % texte
      \headsep       42pt   % distance de '3' à '4', la distance entre l'en-tête et le texte
-     \textheight    700pt  % distance de '4' à '5', pour déterminer la hauteur du texte
-     \textwidth     170mm  % distance de 'c' à 'd' 
+     \textheight    760pt  % distance de '4' à '5', pour déterminer la hauteur du texte
+     \textwidth     177.5mm  % distance de 'c' à 'd' 
    % en-tête
      \topmargin     0pt    % distance de '1' à '2', pour descendre (si positif) ou remonter (si négatif) le tout
      \headheight    14pt   % distance de '2' à '3', doit être > 13.59999
    % bas de page
-     \footskip      42pt   % distance de '5' à '6', la distance entre le texte et le bas de page
+     \footskip      38pt   % distance de '5' à '6', la distance entre le texte et le bas de page
 %\addtolength{\hoffset}{-1cm}
 %\addtolength{\textwidth}{2.5cm}
 %\addtolength{\voffset}{-2cm}
@@ -101,4 +101,17 @@
 \sbox{\logollnux}{\raisebox{-2.5cm}{\includegraphics[height=2.5cm]{logo.png}}}
 
 % pied de page
-\cfoot{\url{www.louvainlinux.be} \hspace{0.5cm}Rue Constantin Meunier 12 (Bruyères)}
+\rfoot{\url{www.louvainlinux.be}\hspace{-3.0cm}}
+\cfoot{}
+\lfoot{Rue Constantin Meunier 12 (Bruyères)}
+
+% PDF
+   \usepackage[pdftitle={Fiche Informative},  % apparition ds les propriétés du doc
+               pdfauthor={Louvain-li-Nux},
+               pdfsubject={Fiche Informative du Louvain-li-Nux},
+               pdfkeywords={louvain-li-nux,llnux,fiche info,lln,kap,ucl},
+	       colorlinks=true,
+	       linkcolor=webdarkblue, 
+	       filecolor=webblue, 
+	       urlcolor=webdarkblue,
+	       citecolor=webgreen]{hyperref}
