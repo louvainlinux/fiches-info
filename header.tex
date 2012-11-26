@@ -98,7 +98,24 @@
 
 % Logo du Louvain-Li-Nux
 \newsavebox{\logollnux}
-\sbox{\logollnux}{\raisebox{-2.5cm}{\includegraphics[height=2.5cm]{logo.png}}}
+\sbox{\logollnux}{\raisebox{-2.2cm}{\includegraphics[height=2.5cm]{logo.png}}}
+\newsavebox{\logoqr}
+\sbox{\logoqr}{\raisebox{-2.2cm}{\includegraphics[height=2.5cm]{qr.png}}}
+
+%titre
+\newcommand{\titlellnux}[1]
+{
+	\hspace{-1cm}
+	\begin{tabular}{lp{13cm}r}
+		\usebox{\logoqr}
+			&
+		\begin{center}{\Large Les fiches du Louvain-li-Nux\linebreak \linebreak
+		\LARGE \textbf{Episode #1}}\end{center}
+			&
+		\usebox{\logollnux}
+	\end{tabular}
+	\vspace{-.5cm}
+}
 
 % pied de page
 \rfoot{\url{www.louvainlinux.be}\hspace{-3.0cm}}
