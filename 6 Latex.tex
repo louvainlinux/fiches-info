@@ -1,0 +1,44 @@
+\input{header.tex}
+
+\begin{document}
+
+% Titre
+\titlellnux{6 : \LaTeX}
+
+\vspace{.6cm}
+% Contenu
+\paragraph{Knuth: The Art of Computer Programming}
+En 1973, Donald Knuth publia son \oe uvre de référence "The art of computer programming" dont aucun bon informaticien ignore l'existence. Quand il commençait à le rédiger, il se rendait compte qu'aucun logiciel de typographie ne produisait des textes suffisamment claires et structuées. Il décida donc de créer sa propre solution qui est désormais connue sous le nom de \TeX{} (connu comme plain\TeX). Le génie de Knuth ne vient pas sans un certain perfectionnisme. Pour en donner un exemple, il reformulait ses phrases jusqu'à ce qu'elles harmonissaient avec ses alinéas tellement il visait l'unité de la forme et du contenu.
+Le premier qui trouve une faute dans ces livres volumineux (même une virgule mal placée) sera payé un cent par M. Knuth. Le deuxième le double et ainsi de suite.
+
+A moins que vous soyez aussi perfectionniste que Knuth (ou encore Jean Luc Doumont pour ceux qui le conaissent), nous ne vous conseillons pas d'écrire vos documents en \TeX. Cela revient à de le programmation pure et dure. Il y a aujourd'hui des logiciels plus simples pour faire la même chose.
+
+\paragraph{Latex}
+\LaTeX{} se base sur \TeX{} tout en étant beaucoup plus facile à gérer. Il ne faut plus dire au logiciel que vous voulez des lettres de telle ou telle taille à tel et tel endroit. Il ne faut plus diviser la feuille en coordonnées cartésiennes comme \TeX{} vous oblige de la faire. Vous dites au programme que ceci est un chapitre et cela une section ou sous-section et \LaTeX{} va s'occuper de les mettre dans la bonne grandeur, de les numéroter et de les mettre dans la table des matières.
+
+Ce que \LaTeX{} a un commun avec \TeX{} et ce qui le différencie des autres programmes comme LibreOffice, Word etc., c'est que vous ne travaillez pas sur le document final. Vous travaillez sur du code (d'une syntaxe très simple, n'ayez pas peur) qu'il faut compiler pour en faire typiquement un fichier *.pdf. On dit que \LaTeX{} n'est pas \textsc{Wysiwig} (What you see is what you get). Une fois qu'on s'est habitué, il y a un énorme avantage à cela. En faisant réference à l'acronyme \textsc{Wysiwig}, ses défendeurs disent que \LaTeX{} est \textsc{Wygiwym} (What you get is what you meant).
+
+Vous avez tous sans doute connu des situations ou votre fichier *.odt ou *.doc ne veut pas obéir à vos ordres. Vous savez ce que vous voulez obtenir, mais le texte se déplace soit trop à gauche, soit trop à droite. Les alinéas ne fonctionnent pas bien, les tableaux sont coupes et distribués sur deux pages, les équations compliquées sont difficiles à composer... Si vous mettez un commun des travaux de groupes réalisez sur des ordinateurs différents, ces problèmes se multiplient.
+
+En travaillant avec \LaTeX{}, vous n'aurez plus ce genre de problèmes. Vous réfléchissez surtout à la structure de votre texte et beaucoup moins à sa mise en page. Vous pouvez changer les marges, la police et la grandeur du texte tout à la fin de votre travail. \LaTeX{} se base sur la structure de l'information et va trouver soi même comment arranger l'information sur les pages tout en ajustant les références au nouveau document.
+
+Un autre avantage est qu'avec \LaTeX{}, il est particulièrement facile de rédiger des formules mathématiques complexes sans se tromper. Presque tous vos syllabi de Mathématiques ou Physique ainsi qu'une bonne partie de vos livres de référence sont rédigés en \LaTeX{}.
+
+\paragraph{Bibtex}
+Les Maths c'est bien bon dites vous, mais quid des sciences humaines? Pour vous aussi, \LaTeX{} est très intéressant. Tout d'abord, il y a biensur moyen d'écrire des documents \LaTeX{} TimesNewRoman et compagnie si c'est qu'on vous impose.
+Les avantages en ce qui concerne la structuration du document restent présents qu'il s'agit d'un texte mathématique ou non. En plus de cela, il y a un autre avantage majeur. BiB\TeX{} est là pour s'occuper de vos sources.
+
+Si vous trouvez des articles scientifiques dans les bases de données en ligne, les *.pdf sont accompagnés de fichiers *.bib qui contiennent de manière standardidsée les références tel que les auteurs, le journal, le numéro... BiB\TeX{} s'arrange pour mettre dans la bibliographie tous les articles auxquels il y a référence dans le texte et uniquement ceux là. Les conventions d'écriture des sources sont automatiquement respectées. En plus, toutes les subtilités comme les op. cit. et ibidem sont automatiquement gérés. Une chose en moins à garder en tête.
+
+\paragraph{Les paquets}
+Il y a des extensions pour plus ou moins tous les documents dont vous pourrez avoir besoin. En \LaTeX, ces modules s'apellent des paquets. 
+
+\begin{itemize}
+\item Le paquet \texttt{moderncv} produit des CVs efficaces et bien structurés et des lettres de motivation.
+\item La classe \texttt{beamer} est là pour produire des slides.
+\item Pour les profs, lae paquet \texttt{alterqcm} génère facilement des \textsc{Qcm}.
+\item Ti\textit{k}Z est là pour dessiner des petits schémas vectoriels directement en \LaTeX{}.
+\end{itemize}
+
+\end{document}
+	
