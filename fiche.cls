@@ -116,17 +116,21 @@
 %titre
 \newcommand{\titlellnux}[2]
 {
-	\hspace{-1cm}
-	\begin{tabular}{lp{13cm}c}
-		\usebox{\logoqr}
-			&
-		\begin{center}{\Large Les fiches du Louvain-li-Nux\linebreak \linebreak
-		\LARGE \textbf{Episode #1 : #2}}\end{center}
-			&
-		\usebox{\logollnux}\\
-        & & {\fontsize{8pt}{9.6pt}\selectfont Louvain-li-Nux}
-	\end{tabular}
-	\vspace{-.5cm}
+  \begin{minipage}{0.13\textwidth}
+    \centering
+    \usebox{\logoqr}
+  \end{minipage}
+  \begin{minipage}{0.7\textwidth}
+    \begin{center}
+      {\Large Les fiches du Louvain-li-Nux\linebreak \linebreak
+      \LARGE \textbf{Episode #1 : #2}}
+    \end{center}
+  \end{minipage}
+  \begin{minipage}{0.11\textwidth}
+    \centering
+    \usebox{\logollnux}\\[6pt]
+    {\fontsize{8pt}{9.6pt}\selectfont Louvain-li-Nux}
+  \end{minipage}
 }
 
 % pied de page
