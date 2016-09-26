@@ -111,7 +111,7 @@
 \newsavebox{\logollnux}
 \sbox{\logollnux}{\raisebox{-2.2cm}{\includegraphics[height=2.5cm]{../logo.png}}}
 \newsavebox{\logoqr}
-\sbox{\logoqr}{\raisebox{-2.2cm}{\includegraphics[height=2.5cm]{../qr.png}}}
+\sbox{\logoqr}{\raisebox{-2.2cm}{\includegraphics[height=2.5cm]{../kaps.png}}}
 
 %titre
 \newcommand{\titlellnux}[2]
