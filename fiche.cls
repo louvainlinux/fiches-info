@@ -123,7 +123,7 @@
   \begin{minipage}{0.7\textwidth}
     \begin{center}
       {\Large Les fiches du Louvain-li-Nux\linebreak \linebreak
-      \LARGE \textbf{Episode #1 : #2}}
+      \LARGE \textbf{Épisode #1 : #2}}
     \end{center}
   \end{minipage}
   \begin{minipage}{0.11\textwidth}
