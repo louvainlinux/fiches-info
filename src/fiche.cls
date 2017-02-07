@@ -109,9 +109,9 @@
 
 % Logo du Louvain-Li-Nux
 \newsavebox{\logollnux}
-\sbox{\logollnux}{\raisebox{-2.2cm}{\includegraphics[height=2.5cm]{../logo.png}}}
+\sbox{\logollnux}{\raisebox{-2.2cm}{\includegraphics[height=2.5cm]{../img/logo.png}}}
 \newsavebox{\logoqr}
-\sbox{\logoqr}{\raisebox{-2.2cm}{\includegraphics[height=2.5cm]{../kaps.png}}}
+\sbox{\logoqr}{\raisebox{-2.2cm}{\includegraphics[height=2.5cm]{../img/kaps.png}}}
 
 %titre
 \newcommand{\titlellnux}[2]
@@ -134,7 +134,7 @@
 }
 
 % pied de page
-\rfoot{\url{www.louvainlinux.be}\hspace{-3.0cm}}
+\rfoot{\url{www.louvainlinux.org}\hspace{-3.0cm}}
 \cfoot{}
 \lfoot{Rue Constantin Meunier 12 (Bruyères)}
 
