@@ -7,9 +7,6 @@
 PDFVIEWER=xdg-open # Default pdf viewer - GNU/Linux
 #PDFVIEWER=open # Default pdf viewer - Mac OS
 ROOT=../..
-COURSE_NAME=${MAIN_NAME}
-
-ALL+=$(MAIN_NAME).pdf
 
 # You want latexmk to *always* run, because make does not have all the info.
 .PHONY: $(MAIN_NAME).pdf
@@ -17,10 +14,11 @@ ALL+=$(MAIN_NAME).pdf
 # If you want the pdf to be opened by your preferred pdf viewer
 # after `$ make', comment the following line and uncomment the
 # line after
-#default: all
-default: show
+default: all
 
-all: $(ALL)
+all: $(MAIN_NAME).pdf
+	make clean
+	make show
 
 # MAIN LATEXMK RULE
 
@@ -33,17 +31,11 @@ all: $(ALL)
 
 $(MAIN_NAME).pdf: $(MAIN_NAME).tex
 	latexmk -pdf -pdflatex="pdflatex -shell-escape -enable-write18" \
-	  -use-make $(MAIN_NAME).tex
+	  -output-directory=$(ROOT) -use-make $(MAIN_NAME).tex
 
 clean:
-	latexmk -CA
+	rm $(ROOT)/*.aux $(ROOT)/*.fls $(ROOT)/*.log $(ROOT)/*.out \
+	  $(ROOT)/*.fdb_latexmk
 
 show: $(MAIN_NAME).pdf
-	$(PDFVIEWER) $(MAIN_NAME).pdf 2> /dev/null &
-
-release: all
-	cd ${ROOT}; python3 ~/git/smartcp/smartcp.py -vvvv -s \
-	  quadri=$(QUADRI) -s cours=$(COURSE_NAME) config.yml
-
-add:
-	git add $(MAIN_NAME).tex
+	$(PDFVIEWER) $(ROOT)/$(MAIN_NAME).pdf 2> /dev/null &
