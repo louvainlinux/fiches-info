@@ -17,8 +17,9 @@ ROOT=../..
 default: all
 
 all: $(MAIN_NAME).pdf
-	make clean
-	make show
+	rm $(ROOT)/*.aux $(ROOT)/*.fls $(ROOT)/*.log $(ROOT)/*.out \
+	  $(ROOT)/*.fdb_latexmk
+	$(PDFVIEWER) $(ROOT)/$(MAIN_NAME).pdf 2> /dev/null &
 
 # MAIN LATEXMK RULE
 
