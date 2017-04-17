@@ -30,10 +30,6 @@
 \RequirePackage[usenames]{color}
 \RequirePackage{varioref}                 % \vpageref
 
-\RequirePackage{fancyhdr}                 % cfoot
-\pagestyle{fancy}                     % we need info at the bottom but not a footnote
-\renewcommand{\headrulewidth}{0pt}    % ça crée une ligne au-dessus... on l'enlève
-% \thispagestyle{empty}               % we need only one page
 
 \renewcommand{\familydefault}{\sfdefault}
 
@@ -107,6 +103,11 @@
 %\addtolength{\voffset}{-2cm}
 %\addtolength{\textheight}{4.9cm}
 
+\RequirePackage{fancyhdr}                 % cfoot
+\pagestyle{fancy}                     % we need info at the bottom but not a footnote
+\renewcommand{\headrulewidth}{0pt}    % ça crée une ligne au-dessus... on l'enlève
+% \thispagestyle{empty}               % we need only one page
+
 % Logo du Louvain-Li-Nux
 \newsavebox{\logollnux}
 \sbox{\logollnux}{\raisebox{-2.2cm}{\includegraphics[height=2.5cm]{../img/logo.png}}}
@@ -134,9 +135,11 @@
 }
 
 % pied de page
-\rfoot{\url{www.louvainlinux.org}\hspace{-3.0cm}}
+\lfoot{Rue Constantin Meunier 12 (Bruyères) \\
+\url{www.louvainlinux.org}}
 \cfoot{}
-\lfoot{Rue Constantin Meunier 12 (Bruyères)}
+\rfoot{\raisebox{-1.5em}{\includegraphics[width=0.15\textwidth]{../img/cc-by-sa.png}}}
+
 
 % PDF
    \RequirePackage[pdftitle={Fiche Informative},  % apparition ds les propriétés du doc
