@@ -136,7 +136,7 @@
 
 % pied de page
 \lfoot{Rue Constantin Meunier 12 (Bruyères) \\
-\url{www.louvainlinux.org}}
+Infos et autres fiches sur \url{www.louvainlinux.org}}
 \cfoot{}
 \rfoot{\raisebox{-1.5em}{\includegraphics[width=0.15\textwidth]{../img/cc-by-sa.png}}}
 
